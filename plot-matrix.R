@@ -16,6 +16,8 @@ all <- dplyr::bind_rows(list(read("monetdb"), read("postgres"), read("hyper"), r
 
 names(all) <- c("query", "result", "group", "sys")
 
+all$success <- as.integer(all$result == "match")
+
 pdf("matrix.pdf", height=10, width=6)
-ggplot(all, aes(x=sys, y=query)) + geom_tile(aes(fill = result)) + theme( axis.title.x=element_blank()) + scale_fill_manual(values = c("diff" = "#ffffbf", "match" = "#99d594", "fail" = "#fc8d59"))
+ggplot(all, aes(x=reorder(sys, -success, sum), y=query)) + geom_tile(aes(fill = result)) + theme( axis.title.x=element_blank()) + scale_fill_manual(values = c("diff" = "#ffffbf", "match" = "#99d594", "fail" = "#fc8d59"))
 dev.off()

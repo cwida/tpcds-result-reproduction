@@ -22,5 +22,5 @@ ORDER BY lochierarchy DESC ,
          --     WHEN lochierarchy = 0 THEN i_category
          -- END ,
          rank_within_parent
---LIMIT 100;
+LIMIT 100;
 

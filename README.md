@@ -1,3 +1,5 @@
+# Reproducing TPC-DS Qualification Results
+
 [TPC-DS ("Decision Support")](http://www.tpc.org/tpcds/) is a standardized database benchmark. The benchmark toolkit contains reference ("qualification") queries and results. These are quite useful to check data management systems for bugs, as data, query and result are known and standardized.
 
 However, as so often, reality is not so easy. The reference answers that ship with TPC-DS are quite broken, both from a syntactical and semantic perspective. In this repository, we present a cleaned and corrected set of TPC-DS queries and reference answers. We also include a tool (`roundingdiff.py`) that can automatically check sets of query answers against the reference in this repository, allowing some minor numerical drift. 

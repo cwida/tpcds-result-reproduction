@@ -1,0 +1,75 @@
+use docker container
+
+docker pull wnameless/oracle-xe-11g:16.04
+docker run -d -p 49161:1521 wnameless/oracle-xe-11g
+
+
+use sqlplus/sqlldr clients from
+https://www.oracle.com/technetwork/topics/intel-macsoft-096467.html
+
+
+-- create tables
+sqlplus system/oracle@localhost:49161/xe < tools/tpcds.sql
+
+-- oracle does not like the time type, create manually
+create table dbgen_version
+(
+   dv_version                varchar(16)                   ,
+   dv_create_date            date                          ,
+   dv_create_time            varchar(100)                          ,
+   dv_cmdline_args           varchar(200)                  
+);
+
+
+-- run this query to extend storage space so the data can be loaded
+ALTER TABLESPACE system
+   ADD DATAFILE '/u01/app/oracle/oradata/XE/moar.dbf' SIZE 10M
+     AUTOEXTEND ON
+     NEXT 512K
+     MAXSIZE 10G;
+
+
+
+
+-- use the files in oracle-sqlldr-config to load the data, replace the paths within with what works for you
+
+sqlldr system/oracle@localhost:49161/xe control=dbgen_version.ctl skip=0 rows=10000 bindsize=256000  
+
+
+
+-- create forein keis
+
+sqlplus system/oracle@localhost:49161/xe < tools/tpcds_ri.sql
+
+
+-- collect optimizer stats
+
+
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'dbgen_version'); 
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'income_band');   
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'warehouse');     
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'ship_mode');     
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'reason');        
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'call_center');   
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'store');         
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'web_page');      
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'web_site');      
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'promotion');     
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'household_demographics');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'catalog_page');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'item');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'time_dim');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'customer_address');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'web_returns');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'date_dim');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'customer');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'catalog_returns');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'store_returns');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'customer_demographics');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'web_sales');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'inventory');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'catalog_sales');
+EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'store_sales');
+
+
+-- use shell script queries-oracle.sh to run queries

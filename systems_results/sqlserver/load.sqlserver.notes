@@ -1,0 +1,35 @@
+docker pull mcr.microsoft.com/mssql/server  
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=GdVf53X5526Q19t' -p 1433:1433  -d mcr.microsoft.com/mssql/server:latest
+
+ sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -i tools/tpcds.sql
+
+run those in the sf1 data folder
+
+bcp dbgen_version          in 'dbgen_version.dat'          -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp income_band            in 'income_band.dat'            -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp warehouse              in 'warehouse.dat'              -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp ship_mode              in 'ship_mode.dat'              -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp reason                 in 'reason.dat'                 -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp call_center            in 'call_center.dat'            -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp store                  in 'store.dat'                  -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp web_page               in 'web_page.dat'               -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp web_site               in 'web_site.dat'               -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp promotion              in 'promotion.dat'              -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp household_demographics in 'household_demographics.dat' -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp catalog_page           in 'catalog_page.dat'           -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp item                   in 'item.dat'                   -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp time_dim               in 'time_dim.dat'               -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp customer_address       in 'customer_address.dat'       -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp web_returns            in 'web_returns.dat'            -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp date_dim               in 'date_dim.dat'               -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp customer               in 'customer.dat'               -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp catalog_returns        in 'catalog_returns.dat'        -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp store_returns          in 'store_returns.dat'          -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp customer_demographics  in 'customer_demographics.dat'  -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp web_sales              in 'web_sales.dat'              -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp inventory              in 'inventory.dat'              -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp catalog_sales          in 'catalog_sales.dat'          -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+bcp store_sales            in 'store_sales.dat'            -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
+
+
+then, run the shell script here to run the queries

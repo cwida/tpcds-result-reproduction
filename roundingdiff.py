@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
 # compare tab-separated result sets, allowing some numerical delta
 # 2018-10-24 hannes@cwi.nl

@@ -131,5 +131,5 @@ ORDER BY channel,
          i_brand_id,
          i_class_id,
          i_category_id
---LIMIT 100;
+LIMIT 100;
 

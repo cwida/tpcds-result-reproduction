@@ -27,7 +27,7 @@ def load(fname):
 	return df
 
 def diff(f1, f2):
-	if not os.path.exists(f1) or not os.path.exists(f2):
+	if not os.path.exists(f1) or not os.path.exists(f2) or os.path.getsize(f1) == 0 or os.path.getsize(f2) == 0:
 		return {'class': 'fail', 'group': '', 'message': "No result %s <> %s" % (f1, f2)}
 
 
@@ -47,19 +47,14 @@ def diff(f1, f2):
 
 	diffs = 0
 
-	# FIXME use pandas ops here to speed things up (all/any)!
-	for r in range(len(p1)):
-		for c in range(len(p1.dtypes)):
-			v1 = p1[c][r]
-			v2 = p2[c][r]
-			if (str(p1.dtypes[c]) == "object" and str(v1) != str(v2)):
-				#print("String diff in row %d col %d, %s != %s" % (r, c, str(v1), str(v2)))
-				diffs = diffs + 1
+	for c in range(len(p1.dtypes)):
+		v1 = p1[c]
+		v2 = p2[c]
+		if (str(p1.dtypes[c]) == "object"):
+			diffs = diffs + (v1.astype(str) != v2.astype(str)).sum()
 
-			if (str(p1.dtypes[c]) == "float64" and abs(v1 - v2) > abs(v1 * delta)):
-				if (v1 != v2):
-					#print("Numeric diff in row %d col %d, %s != %s" % (r, c, str(v1), str(v2)))
-					diffs = diffs +1
+		if (str(p1.dtypes[c]) == "float64"):
+			diffs = diffs + ((v1-v2).abs() > (v1 * delta).abs()).sum()
 
 	if diffs > 0:
 		return {'class': 'diff', 'group': 'diff_data', 'message': "%s != %s, %d diffs" % (f1, f2, diffs)}

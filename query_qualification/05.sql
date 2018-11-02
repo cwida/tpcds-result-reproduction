@@ -89,19 +89,19 @@ WITH ssr AS
           sum(profit) AS profit
    FROM
      (SELECT 'store channel' AS channel ,
-             'store' || s_store_id AS id ,
+             concat('store', s_store_id) AS id ,
              sales ,
              returns_ ,
              (profit - profit_loss) AS profit
       FROM ssr
       UNION ALL SELECT 'catalog channel' AS channel ,
-                       'catalog_page' || cp_catalog_page_id AS id ,
+                       concat('catalog_page', cp_catalog_page_id) AS id ,
                        sales ,
                        returns_ ,
                        (profit - profit_loss) AS profit
       FROM csr
       UNION ALL SELECT 'web channel' AS channel ,
-                       'web_site' || web_site_id AS id ,
+                       concat('web_site', web_site_id) AS id ,
                        sales ,
                        returns_ ,
                        (profit - profit_loss) AS profit

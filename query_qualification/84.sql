@@ -1,6 +1,7 @@
 
 SELECT c_customer_id AS customer_id ,
-       concat(coalesce(c_last_name,'') , ', ', coalesce(c_first_name,'')) AS customername
+     --concat(coalesce(c_last_name,''), ', '), coalesce(c_first_name,'')) AS customername
+concat(concat(coalesce(c_last_name,''), ', '), coalesce(c_first_name,'')) AS customername
 FROM customer ,
      customer_address ,
      customer_demographics ,

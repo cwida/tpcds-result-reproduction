@@ -12,4 +12,4 @@ query = open(sys.argv[1], 'r').read().replace('\n', ' ').replace('SUBSTRING', 'S
 cursor = conn.cursor()
 cursor.execute(query)
 for r in cursor.fetchall():
-	print("\t".join([str(c) for c in r]))
+	print("\t".join([str(c).strip() for c in r]))

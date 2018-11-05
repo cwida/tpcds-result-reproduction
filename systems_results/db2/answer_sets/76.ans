@@ -18,7 +18,7 @@ catalog	cs_ship_addr_sk	1998	2	Music	10	32062.82
 catalog	cs_ship_addr_sk	1998	2	Shoes	7	4682.58
 catalog	cs_ship_addr_sk	1998	2	Sports	7	5470.29
 catalog	cs_ship_addr_sk	1998	2	Women	5	14928.09
-catalog	cs_ship_addr_sk	1998	2	None	1	1535.61
+catalog	cs_ship_addr_sk	1998	2		1	1535.61
 catalog	cs_ship_addr_sk	1998	3	Books	20	22224.09
 catalog	cs_ship_addr_sk	1998	3	Children	19	18667.83
 catalog	cs_ship_addr_sk	1998	3	Electronics	15	21854.97
@@ -39,7 +39,7 @@ catalog	cs_ship_addr_sk	1998	4	Music	35	51308.03
 catalog	cs_ship_addr_sk	1998	4	Shoes	27	10881.49
 catalog	cs_ship_addr_sk	1998	4	Sports	33	33380.56
 catalog	cs_ship_addr_sk	1998	4	Women	35	14347.96
-catalog	cs_ship_addr_sk	1998	4	None	2	839.65
+catalog	cs_ship_addr_sk	1998	4		2	839.65
 catalog	cs_ship_addr_sk	1999	1	Books	14	35278.57
 catalog	cs_ship_addr_sk	1999	1	Children	13	17183.17
 catalog	cs_ship_addr_sk	1999	1	Electronics	4	153.18
@@ -80,7 +80,7 @@ catalog	cs_ship_addr_sk	1999	4	Music	28	14816.79
 catalog	cs_ship_addr_sk	1999	4	Shoes	35	48226.50
 catalog	cs_ship_addr_sk	1999	4	Sports	32	35012.19
 catalog	cs_ship_addr_sk	1999	4	Women	30	24033.32
-catalog	cs_ship_addr_sk	1999	4	None	1	None
+catalog	cs_ship_addr_sk	1999	4		1	
 catalog	cs_ship_addr_sk	2000	1	Books	15	50786.51
 catalog	cs_ship_addr_sk	2000	1	Children	6	5623.72
 catalog	cs_ship_addr_sk	2000	1	Electronics	13	35869.18

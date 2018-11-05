@@ -1,6 +1,6 @@
 use docker container
 
-docker pull wnameless/oracle-xe-11g:16.04
+docker pull wnameless/oracle-xe-11g:latest
 docker run -d -p 49161:1521 wnameless/oracle-xe-11g
 
 
@@ -34,8 +34,6 @@ ALTER TABLESPACE system
 -- use the files in oracle-sqlldr-config to load the data, replace the paths within with what works for you
 
 sqlldr system/oracle@localhost:49161/xe control=dbgen_version.ctl skip=0 rows=10000 bindsize=256000  
-
-
 sqlldr system/oracle@localhost:49161/xe control=dbgen_version.ctl skip=0 rows=10000 bindsize=2560000  
 sqlldr system/oracle@localhost:49161/xe control=income_band.ctl skip=0 rows=10000 bindsize=2560000    
 sqlldr system/oracle@localhost:49161/xe control=warehouse.ctl skip=0 rows=10000 bindsize=2560000      

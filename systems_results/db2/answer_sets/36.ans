@@ -1,33 +1,33 @@
-0	None	None	2	1
-0	Books	None	1	1
-0	Children	None	1	1
-0	Electronics	None	1	1
-0	Home	None	1	1
-0	Jewelry	None	1	1
-0	Men	None	1	1
-0	Music	None	1	1
-0	Shoes	None	1	1
-0	Sports	None	1	1
-0	Women	None	1	1
-0	None	None	1	1
+0			2	1
+0	Books		1	1
+0	Children		1	1
+0	Electronics		1	1
+0	Home		1	1
+0	Jewelry		1	1
+0	Men		1	1
+0	Music		1	1
+0	Shoes		1	1
+0	Sports		1	1
+0	Women		1	1
+0			1	1
 0	Books	arts	0	1
 0	Sports	archery	0	1
-0	Shoes	None	0	1
+0	Shoes		0	1
 0	Shoes	womens	0	1
 0	Shoes	mens	0	1
 0	Shoes	kids	0	1
 0	Shoes	athletic	0	1
-0	Music	None	0	1
+0	Music		0	1
 0	Music	rock	0	1
 0	Music	pop	0	1
 0	Music	country	0	1
 0	Music	classical	0	1
-0	Men	None	0	1
+0	Men		0	1
 0	Men	sports-apparel	0	1
 0	Men	shirts	0	1
 0	Men	pants	0	1
 0	Men	accessories	0	1
-0	Jewelry	None	0	1
+0	Jewelry		0	1
 0	Jewelry	womens watch	0	1
 0	Jewelry	semi-precious	0	1
 0	Jewelry	rings	0	1
@@ -44,7 +44,7 @@
 0	Jewelry	consignment	0	1
 0	Jewelry	bracelets	0	1
 0	Jewelry	birdal	0	1
-0	Home	None	0	1
+0	Home		0	1
 0	Home	wallpaper	0	1
 0	Home	tables	0	1
 0	Home	rugs	0	1
@@ -77,12 +77,12 @@
 0	Electronics	camcorders	0	1
 0	Electronics	automotive	0	1
 0	Electronics	audio	0	1
-0	Children	None	0	1
+0	Children		0	1
 0	Children	toddlers	0	1
 0	Children	school-uniforms	0	1
 0	Children	newborn	0	1
 0	Children	infants	0	1
-0	Books	None	0	1
+0	Books		0	1
 0	Books	travel	0	1
 0	Books	sports	0	1
 0	Books	self-help	0	1

@@ -67,7 +67,7 @@ Cole	Amanda	Dr.	Y	92994	15
 Cole	Gretchen	Dr.	N	191039	15
 Cole	June	Miss	N	206225	16
 Cole	Melanie	Mrs.	Y	208547	15
-Collier	None	Mr.	Y	179488	15
+Collier		Mr.	Y	179488	15
 Collins	Patsy	Ms.	N	13775	15
 Conner	Sondra	Miss	N	191684	15
 Conrad	Jason	Mr.	N	166289	15
@@ -83,7 +83,7 @@ Davis	Jess	Sir	Y	197947	15
 Davis	Sandra	Ms.	N	141249	15
 Davis	Vickie	Miss	Y	35264	15
 Davison	Jeffrey	Mr.	Y	81413	16
-Dejesus	Lorena	Dr.	None	157934	15
+Dejesus	Lorena	Dr.		157934	15
 Delacruz	Brenton	Mr.	Y	96016	15
 Delagarza	John	Mr.	N	62980	15
 Diaz	Brian	Mr.	N	73210	15
@@ -106,7 +106,7 @@ Franklin	Dorothy	Miss	Y	210152	15
 Franklin	Eileen	Miss	Y	88556	15
 Franklin	Judy	Ms.	Y	27813	15
 Freeman	Rayford	Dr.	N	36115	15
-Freeman	None	Mrs.	Y	175123	15
+Freeman		Mrs.	Y	175123	15
 Fuqua	Harvey	Mr.	N	130609	16
 Galindo	Karen	Dr.	N	100437	15
 Galloway	Betty	Mrs.	Y	10097	15
@@ -121,7 +121,7 @@ Gonzales	Cindy	Dr.	Y	96495	15
 Gonzalez	Ruby	Mrs.	Y	228694	15
 Gordon	Larry	Sir	Y	99782	15
 Graham	Brian	Mr.	N	13629	15
-Graham	Jerry	Sir	None	152656	15
+Graham	Jerry	Sir		152656	15
 Grayson	Carolyn	Mrs.	N	69374	16
 Grayson	Terry	Mr.	N	130480	16
 Green	Cynthia	Mrs.	Y	141374	15
@@ -132,7 +132,7 @@ Gutierrez	Ashley	Dr.	N	209948	16
 Haley	Henry	Sir	Y	141619	15
 Hall	Roger	Mr.	N	136216	15
 Hamilton	Alex	Mrs.	N	23084	15
-Hampton	None	None	N	11567	15
+Hampton			N	11567	15
 Harrison	Jennifer	Ms.	Y	63097	15
 Harrison	Michal	Mr.	Y	209687	15
 Harrison	Qiana	Dr.	Y	10522	15
@@ -155,7 +155,7 @@ Johnson	Olen	Mr.	N	12862	15
 Jones	Austin	Dr.	Y	57009	15
 Jones	Eleanor	Ms.	N	27477	16
 Jones	Richard	Dr.	Y	232872	15
-Joyce	None	Ms.	None	154184	16
+Joyce		Ms.		154184	16
 Keaton	Lacey	Mrs.	N	133023	15
 Keith	Bruce	Dr.	Y	24541	15
 Kelly	Betty	Dr.	Y	151468	16
@@ -217,7 +217,7 @@ Morris	John	Dr.	Y	214378	15
 Morris	Martina	Miss	N	32596	15
 Morris	Meghan	Mrs.	Y	127565	15
 Moses	Amy	Dr.	Y	182188	15
-Moss	Michael	None	None	137243	15
+Moss	Michael			137243	15
 Moultrie	Martin	Dr.	N	215102	15
 Mulligan	Mark	Sir	Y	184598	16
 Mullins	Vicki	Dr.	Y	162762	15
@@ -247,16 +247,16 @@ Price	Gloria	Mrs.	Y	22568	15
 Price	Marguerite	Mrs.	N	134265	16
 Price	Paul	Sir	N	103985	16
 Price	Reginald	Sir	Y	123793	15
-Price	None	Sir	N	55817	15
+Price		Sir	N	55817	15
 Pridgen	Hans	Dr.	N	207216	15
 Ramos	David	Dr.	Y	189463	16
 Reece	Jimmy	Sir	N	166493	16
-Reyes	Frank	None	None	84620	15
+Reyes	Frank			84620	15
 Reyna	Rod	Sir	N	46248	16
 Reynolds	Oscar	Sir	Y	222749	15
 Riddle	John	Sir	Y	83916	15
 Rivera	Kate	Ms.	Y	204524	15
-Robb	Laura	Miss	None	173667	15
+Robb	Laura	Miss		173667	15
 Roberts	Candice	Dr.	Y	111855	16
 Roberts	Dorothy	Ms.	N	183154	15
 Roberts	Jennifer	Miss	Y	141296	15
@@ -306,10 +306,10 @@ Thomas	Christel	Dr.	Y	34579	15
 Thomas	Nichole	Miss	N	200721	16
 Thompson	Brenda	Dr.	N	171735	15
 Thompson	Melissa	Dr.	N	162831	15
-Tidwell	Phyllis	None	None	234037	16
+Tidwell	Phyllis			234037	16
 Tilley	Jane	Mrs.	Y	45378	15
 Tolbert	Emily	Miss	Y	40132	15
-Tompkins	Charlotte	None	None	197857	15
+Tompkins	Charlotte			197857	15
 Torres	Jason	Dr.	N	224	16
 Torres	Roberta	Ms.	N	29436	15
 Townsend	Michelle	Mrs.	N	39872	15
@@ -318,12 +318,12 @@ Turner	Marjorie	Mrs.	N	65289	15
 Vogel	Leroy	Sir	Y	29032	15
 Walker	Jim	Sir	N	46947	15
 Walker	Jose	Sir	Y	189670	16
-Walker	Richard	Sir	None	226475	15
+Walker	Richard	Sir		226475	15
 Wall	Russell	Sir	N	17231	16
 Walsh	Javier	Sir	Y	211987	16
 Watson	Tina	Ms.	Y	120030	16
 Webb	Gloria	Ms.	N	65663	15
-West	Carman	Ms.	None	237594	15
+West	Carman	Ms.		237594	15
 West	Rachel	Dr.	Y	138384	15
 White	Diane	Dr.	Y	82960	16
 Whitehead	Magan	Dr.	N	192159	16
@@ -331,20 +331,20 @@ Wiggins	Kermit	Sir	N	112643	15
 Wilbur	Terry	Sir	N	200312	15
 Williams	Archie	Mr.	N	113007	15
 Williams	Karen	Ms.	Y	140802	15
-Williams	Scott	None	None	136844	16
+Williams	Scott			136844	16
 Willis	Amber	Ms.	N	53815	15
 Willis	Michael	Sir	Y	207326	15
 Wood	Mark	Dr.	N	4376	15
 Woody	Philip	Mr.	N	211173	16
-Wright	Amanda	None	Y	105395	15
-None	Joshua	Sir	N	108357	15
-None	Judy	Dr.	None	234350	16
-None	None	Ms.	None	54536	16
-None	None	None	None	148695	16
-None	None	None	None	151297	15
-None	None	None	Y	16278	15
-None	None	None	Y	146557	16
-None	None	None	N	55640	15
-None	None	None	N	58614	15
-None	None	None	N	96514	15
-None	None	None	N	220211	15
+Wright	Amanda		Y	105395	15
+	Joshua	Sir	N	108357	15
+	Judy	Dr.		234350	16
+		Ms.		54536	16
+				148695	16
+				151297	15
+			Y	16278	15
+			Y	146557	16
+			N	55640	15
+			N	58614	15
+			N	96514	15
+			N	220211	15

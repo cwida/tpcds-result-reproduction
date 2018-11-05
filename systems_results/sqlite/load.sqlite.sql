@@ -1,8 +1,6 @@
 -- TPC-DS loading commands for SQLite, 2018-10-24 hannes@cwi.nl
 
 -- schema in ./tools/tpcds.sql (should run as-is)
--- run as follows: sed "s|PWD|/Users/hannes/source/tpcds-kit/data_qualification|" < load.monetdb.sql | mclient                       
--- replace /Users/hannes/source/tpcds-kit/data_qualification with the full path to the TPC-DS data files (.dat)
 
 .mode csv
 .separator "|"
@@ -31,3 +29,6 @@
 .import inventory.dat              inventory              
 .import catalog_sales.dat          catalog_sales          
 .import store_sales.dat            store_sales            
+
+
+-- run queries like so for i in ../../query_qualification/*.sql; do echo $i; j=`basename $i .sql`; sqlite3 -cmd '.sep "\t"' -cmd ".headers OFF" -cmd ".nullvalue ''" -cmd ".timer OFF" ../../ds.db < $i > ../answer_sets/$j.ans ;  done

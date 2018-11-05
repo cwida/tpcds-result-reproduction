@@ -24,7 +24,6 @@ FROM
      AND s_gmt_offset = -5
      AND d_year = 1998
      AND d_moy = 11) promotional_sales,
-
   (SELECT sum(ss_ext_sales_price) total
    FROM store_sales,
         store,

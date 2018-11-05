@@ -6,7 +6,6 @@ WITH frequent_ss_items AS
           count(*) cnt
    FROM store_sales,
         date_dim,
-
      (SELECT SUBSTRING(i_item_desc, 1, 30) itemdesc,
              *
       FROM item) sq1

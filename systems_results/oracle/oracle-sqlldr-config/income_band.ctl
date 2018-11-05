@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/income_band.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/income_band.dat'
 into table income_band
 fields terminated by "|"
 TRAILING NULLCOLS

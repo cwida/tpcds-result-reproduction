@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/web_site.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/web_site.dat'
 into table web_site
 fields terminated by "|"
 TRAILING NULLCOLS

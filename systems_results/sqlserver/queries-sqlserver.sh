@@ -6,12 +6,14 @@ do
 j=`basename $i .sql`; 
 echo $j
 sed -e 's/LIMIT/--LIMIT/' -e 's/stddev_samp/stdev/g' < $i > q.sql
-sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -h-1 -s"	" -i nocount.sql -i q.sql > answer_sets2/$j.ans
-sed 's/NULL//g' < answer_sets/$j.ans > answer_sets/$j.ans.org
-head answer_sets/$j.ans.org
-if grep --quiet "LIMIT" q.sql; then
-	head -n 100 answer_sets/$j.ans.org > answer_sets/$j.ans
-fi
+sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -h-1 -s"	" -i nocount.sql -i q.sql > answer_sets/$j.ans
+	sed -E -e 's/  +//g' -e 's/NULL//g' < answer_sets/$j.ans > answer_sets/$j.ans.fix
+	if grep --quiet "LIMIT" q.sql; then
+		head -n 100 answer_sets/$j.ans.fix > answer_sets/$j.ans
+		rm answer_sets/$j.ans.fix
+	else
+		mv answer_sets/$j.ans.fix answer_sets/$j.ans
+	fi
 rm q.sql
 done
 

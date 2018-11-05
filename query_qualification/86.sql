@@ -29,4 +29,4 @@ select
    lochierarchy desc,
    case when lochierarchy = 0 then i_category end,
    rank_within_parent 
-limit 100;
+LIMIT 100;

@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/call_center.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/call_center.dat'
 into table call_center
 fields terminated by "|"
 TRAILING NULLCOLS

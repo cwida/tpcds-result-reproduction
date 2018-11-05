@@ -3,7 +3,7 @@
 
 export PATH=$PATH:/Users/hannes/Downloads/instantclient_12_2/
 
-for i in ../../query_qualification/*.sql
+for i in ../../query_qualification/35.sql
 do 
 j=`basename $i .sql`; 
 echo $j
@@ -13,13 +13,21 @@ set heading off
 set feedback off
 set markup csv on delimiter | quote off
 
+alter session set nls_date_format = 'YYYY-MM-DD';
+
 " > q.sql
-sed -e 's/LIMIT/--LIMIT/' -e 's/stddev_samp/stdev/g' < $i >> q.sql
+sed -e 's/LIMIT/--LIMIT/' -e 's/SUBSTRING/SUBSTR/g' < $i >> q.sql
 sqlplus -S system/oracle@localhost:49161/xe < q.sql > answer_sets/$j.ans
-sed -e 's/|/	/g' -e 's/"//' < answer_sets/$j.ans > answer_sets/$j.ans.org
-head answer_sets/$j.ans.org
-head -n 100 answer_sets/$j.ans.org > answer_sets/$j.ans
+sed -e 's/|/	/g' -e 's/"//' < answer_sets/$j.ans | sed -E -e 's/  +//g' > answer_sets/$j.ans.fix
+	if grep --quiet "LIMIT" q.sql; then
+		head -n 100 answer_sets/$j.ans.fix > answer_sets/$j.ans
+		rm answer_sets/$j.ans.fix
+	else
+		mv answer_sets/$j.ans.fix answer_sets/$j.ans
+	fi
+
 done
 
-# FIXME: actually check whether LIMIT is in query
-# FIXME: replace more than two whitespaces with nothing in results
+
+
+	

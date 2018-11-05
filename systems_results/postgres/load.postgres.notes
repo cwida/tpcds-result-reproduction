@@ -1,0 +1,48 @@
+docker pull postgres
+docker run -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
+
+
+docker run -d --name some-postgres postgres -c 'shared_buffers=256MB' -c 'max_connections=200'
+
+
+export PGPASSWORD=mysecretpassword
+psql -p 5432 -h localhost -U postgres
+
+psql -p 5432 -h localhost -U postgres < tools/tpcds.sql 
+
+sed "s|PWD|/Users/hannes/source/tpcds-result-reproduction/sf1|" < load.postgres.sql | psql -p 5432 -h localhost -U postgres
+
+
+
+\copy dbgen_version from dbgen_version.dat delimiter as '|' csv null as ''
+
+
+
+\copy dbgen_version          from 'dbgen_version.dat'          delimiter as '|' csv null as '';
+\copy income_band            from 'income_band.dat'            delimiter as '|' csv null as '';
+\copy warehouse              from 'warehouse.dat'              delimiter as '|' csv null as '';
+\copy ship_mode              from 'ship_mode.dat'              delimiter as '|' csv null as '';
+\copy reason                 from 'reason.dat'                 delimiter as '|' csv null as '';
+\copy call_center            from 'call_center.dat'            delimiter as '|' csv null as '';
+\copy store                  from 'store.dat'                  delimiter as '|' csv null as '';
+\copy web_page               from 'web_page.dat'               delimiter as '|' csv null as '';
+\copy web_site               from 'web_site.dat'               delimiter as '|' csv null as '';
+\copy promotion              from 'promotion.dat'              delimiter as '|' csv null as '';
+\copy household_demographics from 'household_demographics.dat' delimiter as '|' csv null as '';
+\copy catalog_page           from 'catalog_page.dat'           delimiter as '|' csv null as '';
+\copy item                   from 'item.dat'                   delimiter as '|' csv null as '';
+\copy time_dim               from 'time_dim.dat'               delimiter as '|' csv null as '';
+\copy customer_address       from 'customer_address.dat'       delimiter as '|' csv null as '';
+\copy web_returns            from 'web_returns.dat'            delimiter as '|' csv null as '';
+\copy date_dim               from 'date_dim.dat'               delimiter as '|' csv null as '';
+\copy customer               from 'customer.dat'               delimiter as '|' csv null as '';
+\copy catalog_returns        from 'catalog_returns.dat'        delimiter as '|' csv null as '';
+\copy store_returns          from 'store_returns.dat'          delimiter as '|' csv null as '';
+\copy customer_demographics  from 'customer_demographics.dat'  delimiter as '|' csv null as '';
+\copy web_sales              from 'web_sales.dat'              delimiter as '|' csv null as '';
+\copy inventory              from 'inventory.dat'              delimiter as '|' csv null as '';
+\copy catalog_sales          from 'catalog_sales.dat'          delimiter as '|' csv null as '';
+\copy store_sales            from 'store_sales.dat'            delimiter as '|' csv null as '';
+
+
+vaccuum, analyze, ...

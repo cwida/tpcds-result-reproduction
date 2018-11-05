@@ -1,3 +1,4 @@
 *.tsv
 *.pdf
 **/.DS_Store
+*.log

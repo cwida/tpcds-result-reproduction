@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/time_dim.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/time_dim.dat'
 into table time_dim
 fields terminated by "|"
 TRAILING NULLCOLS

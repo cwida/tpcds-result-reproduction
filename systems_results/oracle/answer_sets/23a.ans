@@ -1,1 +1,6 @@
-17030.91
+(SELECT SUBSTR(i_item_desc, 1, 30) itemdesc, * FROM item) sq1
+*
+ERROR at line 8:
+ORA-00936: missing expression 
+
+

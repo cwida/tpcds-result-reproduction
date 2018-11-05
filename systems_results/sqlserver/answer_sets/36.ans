@@ -1,100 +1,100 @@
 -.434627			2	1
--.445725	Electronics                                       		1	1
--.439058	Children                                          		1	2
--.435374	Home                                              		1	3
--.435134	Sports                                            		1	4
--.434786	Shoes                                             		1	5
--.433936	Men                                               		1	6
--.432814	Books                                             		1	7
--.432785	Women                                             		1	8
--.428839	Jewelry                                           		1	9
--.428396	Music                                             		1	10
+-.445725	Electronics		1	1
+-.439058	Children		1	2
+-.435374	Home		1	3
+-.435134	Sports		1	4
+-.434786	Shoes		1	5
+-.433936	Men		1	6
+-.432814	Books		1	7
+-.432785	Women		1	8
+-.428839	Jewelry		1	9
+-.428396	Music		1	10
 -.408364			1	11
--.644086	Shoes                                             		0	1
--.458206	Home                                              	wallpaper                                         	0	1
--.575062		swimwear                                          	0	1
--.519728	Children                                          		0	1
--.474311	Music                                             		0	1
--.493138	Books                                             		0	1
--.481111	Electronics                                       	scanners                                          	0	1
--.482022	Jewelry                                           	consignment                                       	0	1
--.467489	Sports                                            	basketball                                        	0	1
--.440736	Men                                               	sports-apparel                                    	0	1
--.474417	Women                                             		0	1
--.446633	Women                                             	swimwear                                          	0	2
--.437900	Men                                               	accessories                                       	0	2
--.461180	Sports                                            	optics                                            	0	2
--.452923	Jewelry                                           	gold                                              	0	2
--.474762	Electronics                                       	wireless                                          	0	2
--.459059	Books                                             	self-help                                         	0	2
--.433296	Music                                             	pop                                               	0	2
--.443954	Children                                          	infants                                           	0	2
--.524775		pants                                             	0	2
--.458123	Home                                              	rugs                                              	0	2
--.443543	Shoes                                             	mens                                              	0	2
--.442976	Shoes                                             	womens                                            	0	3
--.453908	Home                                              	blinds/shades                                     	0	3
--.516348		sports-apparel                                    	0	3
--.441166	Children                                          	toddlers                                          	0	3
--.430202	Music                                             	country                                           	0	3
--.453614	Books                                             	romance                                           	0	3
--.468813	Electronics                                       	musical                                           	0	3
--.442266	Jewelry                                           	womens watch                                      	0	3
--.455245	Sports                                            	fitness                                           	0	3
--.435914	Men                                               	pants                                             	0	3
--.441077	Women                                             	maternity                                         	0	3
--.430461	Women                                             	fragrances                                        	0	4
--.423605	Men                                               	shirts                                            	0	4
--.452363	Sports                                            	hockey                                            	0	4
--.438958	Jewelry                                           	semi-precious                                     	0	4
--.459643	Electronics                                       	audio                                             	0	4
--.453097	Books                                             	parenting                                         	0	4
--.427120	Music                                             	classical                                         	0	4
--.439389	Children                                          	newborn                                           	0	4
--.497017		flatware                                          	0	4
--.450804	Home                                              	tables                                            	0	4
--.430848	Shoes                                             	kids                                              	0	4
--.420040	Shoes                                             	athletic                                          	0	5
--.450005	Home                                              	bedding                                           	0	5
--.421156		scanners                                          	0	5
--.431534	Children                                          	school-uniforms                                   	0	5
--.421368	Music                                             	rock                                              	0	5
--.452428	Books                                             	home repair                                       	0	5
--.459285	Electronics                                       	portable                                          	0	5
--.437528	Jewelry                                           		0	5
--.449464	Sports                                            	guns                                              	0	5
--.376248	Men                                               		0	5
--.413024	Women                                             	dresses                                           	0	5
--.444415	Sports                                            	baseball                                          	0	6
--.435690	Jewelry                                           	bracelets                                         	0	6
--.457668	Electronics                                       	automotive                                        	0	6
--.439811	Books                                             	arts                                              	0	6
+-.519728	Children		0	1
+-.493138	Books		0	1
+-.474417	Women		0	1
+-.474311	Music		0	1
+-.481111	Electronics	scanners	0	1
+-.440736	Men	sports-apparel	0	1
+-.482022	Jewelry	consignment	0	1
+-.458206	Home	wallpaper	0	1
+-.644086	Shoes		0	1
+-.575062		swimwear	0	1
+-.467489	Sports	basketball	0	1
+-.461180	Sports	optics	0	2
+-.524775		pants	0	2
+-.443543	Shoes	mens	0	2
+-.458123	Home	rugs	0	2
+-.452923	Jewelry	gold	0	2
+-.437900	Men	accessories	0	2
+-.474762	Electronics	wireless	0	2
+-.433296	Music	pop	0	2
+-.446633	Women	swimwear	0	2
+-.459059	Books	self-help	0	2
+-.443954	Children	infants	0	2
+-.441166	Children	toddlers	0	3
+-.453614	Books	romance	0	3
+-.441077	Women	maternity	0	3
+-.430202	Music	country	0	3
+-.468813	Electronics	musical	0	3
+-.435914	Men	pants	0	3
+-.442266	Jewelry	womens watch	0	3
+-.453908	Home	blinds/shades	0	3
+-.442976	Shoes	womens	0	3
+-.516348		sports-apparel	0	3
+-.455245	Sports	fitness	0	3
+-.452363	Sports	hockey	0	4
+-.497017		flatware	0	4
+-.430848	Shoes	kids	0	4
+-.450804	Home	tables	0	4
+-.438958	Jewelry	semi-precious	0	4
+-.423605	Men	shirts	0	4
+-.459643	Electronics	audio	0	4
+-.427120	Music	classical	0	4
+-.430461	Women	fragrances	0	4
+-.453097	Books	parenting	0	4
+-.439389	Children	newborn	0	4
+-.431534	Children	school-uniforms	0	5
+-.452428	Books	home repair	0	5
+-.413024	Women	dresses	0	5
+-.421368	Music	rock	0	5
+-.459285	Electronics	portable	0	5
+-.376248	Men		0	5
+-.437528	Jewelry		0	5
+-.450005	Home	bedding	0	5
+-.420040	Shoes	athletic	0	5
+-.421156		scanners	0	5
+-.449464	Sports	guns	0	5
+-.444415	Sports	baseball	0	6
 -.414954			0	6
--.444429	Home                                              	paint                                             	0	6
--.442900	Home                                              	kids                                              	0	7
--.412124		womens                                            	0	7
--.437716	Books                                             	computers                                         	0	7
--.450596	Electronics                                       	personal                                          	0	7
--.434631	Jewelry                                           	birdal                                            	0	7
--.442667	Sports                                            	athletic shoes                                    	0	7
--.429766	Sports                                            	sailing                                           	0	8
--.434526	Jewelry                                           	loose stones                                      	0	8
--.446586	Electronics                                       	karoke                                            	0	8
--.436170	Books                                             	entertainments                                    	0	8
--.411242		glassware                                         	0	8
--.441956	Home                                              	decor                                             	0	8
--.440270	Home                                              	curtains/drapes                                   	0	9
--.340050		dresses                                           	0	9
--.433510	Books                                             	business                                          	0	9
--.444758	Electronics                                       	camcorders                                        	0	9
--.433406	Jewelry                                           	rings                                             	0	9
--.426984	Sports                                            	golf                                              	0	9
--.426318	Sports                                            	camping                                           	0	10
--.430754	Jewelry                                           	estate                                            	0	10
--.442434	Electronics                                       	stereo                                            	0	10
--.429332	Books                                             	cooking                                           	0	10
--.285391		semi-precious                                     	0	10
--.436733	Home                                              	accent                                            	0	10
--.429605	Home                                              	glassware                                         	0	11
--.270644		archery                                           	0	11
--.427766	Books                                             	history                                           	0	11
+-.444429	Home	paint	0	6
+-.435690	Jewelry	bracelets	0	6
+-.457668	Electronics	automotive	0	6
+-.439811	Books	arts	0	6
+-.437716	Books	computers	0	7
+-.450596	Electronics	personal	0	7
+-.434631	Jewelry	birdal	0	7
+-.442900	Home	kids	0	7
+-.412124		womens	0	7
+-.442667	Sports	athletic shoes	0	7
+-.429766	Sports	sailing	0	8
+-.411242		glassware	0	8
+-.441956	Home	decor	0	8
+-.434526	Jewelry	loose stones	0	8
+-.446586	Electronics	karoke	0	8
+-.436170	Books	entertainments	0	8
+-.433510	Books	business	0	9
+-.444758	Electronics	camcorders	0	9
+-.433406	Jewelry	rings	0	9
+-.440270	Home	curtains/drapes	0	9
+-.340050		dresses	0	9
+-.426984	Sports	golf	0	9
+-.426318	Sports	camping	0	10
+-.285391		semi-precious	0	10
+-.436733	Home	accent	0	10
+-.430754	Jewelry	estate	0	10
+-.442434	Electronics	stereo	0	10
+-.429332	Books	cooking	0	10
+-.427766	Books	history	0	11
+-.435633	Electronics	monitors	0	11
+-.429735	Jewelry	pendants	0	11

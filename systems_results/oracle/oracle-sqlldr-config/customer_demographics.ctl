@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/customer_demographics.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/customer_demographics.dat'
 into table customer_demographics
 fields terminated by "|"
 (cd_demo_sk                   ,

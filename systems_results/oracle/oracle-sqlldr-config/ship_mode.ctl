@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/ship_mode.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/ship_mode.dat'
 into table ship_mode
 fields terminated by "|"
 TRAILING NULLCOLS

@@ -1,0 +1,60 @@
+https://hub.docker.com/r/ibmcom/db2express-c/
+
+docker run -d -p 50001:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept  ibmcom/db2express-c:latest db2start
+	
+https://www-01.ibm.com/support/docview.wss?uid=ibm10720011
+
+
+. /Applications/dsdriver/db2profile 
+
+
+
+sudo /usr/bin/docker-current exec -i -t 23f5967ede90 /bin/bash
+[root@9020f2c02775 /]# su - db2inst1
+[db2inst1@9020f2c02775 ~]$ db2 create db tpcds
+
+
+db2cli execsql -connstring "DATABASE=tpcds;HOSTNAME=localhost;PORT=50001;UID=db2inst1;PWD=db2inst1-pwd"
+
+
+db2cli execsql -connstring "DATABASE=tpcds;HOSTNAME=localhost;PORT=50001;UID=db2inst1;PWD=db2inst1-pwd" -statementdelimiter ';' < query_qualification/01.sql
+
+
+
+-- using monetdb's dump to insert feature
+msqldump --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > sf1.sql
+
+
+msqldump -t dbgen_version          --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > dbgen_version.sql         
+msqldump -t income_band            --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > income_band.sql           
+msqldump -t warehouse              --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > warehouse.sql             
+msqldump -t ship_mode              --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > ship_mode.sql             
+msqldump -t reason                 --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > reason.sql                
+msqldump -t call_center            --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > call_center.sql           
+msqldump -t store                  --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > store.sql                 
+msqldump -t web_page               --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > web_page.sql              
+msqldump -t web_site               --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > web_site.sql              
+msqldump -t promotion              --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > promotion.sql             
+msqldump -t household_demographics --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > household_demographics.sql
+msqldump -t catalog_page           --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > catalog_page.sql          
+msqldump -t item                   --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > item.sql                  
+msqldump -t time_dim               --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > time_dim.sql              
+msqldump -t customer_address       --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > customer_address.sql      
+msqldump -t web_returns            --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > web_returns.sql           
+msqldump -t date_dim               --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > date_dim.sql              
+msqldump -t customer               --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > customer.sql              
+msqldump -t catalog_returns        --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > catalog_returns.sql       
+msqldump -t store_returns          --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > store_returns.sql         
+msqldump -t customer_demographics  --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > customer_demographics.sql 
+msqldump -t web_sales              --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > web_sales.sql             
+msqldump -t inventory              --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > inventory.sql             
+msqldump -t catalog_sales          --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > catalog_sales.sql         
+msqldump -t store_sales            --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > store_sales.sql           
+
+msqldump -t  --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > sf1.sql
+
+
+
+db2cli execsql -connstring "DATABASE=tpcds;HOSTNAME=localhost;PORT=50001;UID=db2inst1;PWD=db2inst1-pwd" -statementdelimiter ';' < sf1.sql > /dev/null
+
+

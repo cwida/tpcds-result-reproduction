@@ -36,6 +36,33 @@ ALTER TABLESPACE system
 sqlldr system/oracle@localhost:49161/xe control=dbgen_version.ctl skip=0 rows=10000 bindsize=256000  
 
 
+sqlldr system/oracle@localhost:49161/xe control=dbgen_version.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=income_band.ctl skip=0 rows=10000 bindsize=2560000    
+sqlldr system/oracle@localhost:49161/xe control=warehouse.ctl skip=0 rows=10000 bindsize=2560000      
+sqlldr system/oracle@localhost:49161/xe control=ship_mode.ctl skip=0 rows=10000 bindsize=2560000      
+sqlldr system/oracle@localhost:49161/xe control=reason.ctl skip=0 rows=10000 bindsize=2560000         
+sqlldr system/oracle@localhost:49161/xe control=call_center.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=store.ctl skip=0 rows=10000 bindsize=2560000        
+sqlldr system/oracle@localhost:49161/xe control=web_page.ctl skip=0 rows=10000 bindsize=2560000     
+sqlldr system/oracle@localhost:49161/xe control=web_site.ctl skip=0 rows=10000 bindsize=2560000      
+sqlldr system/oracle@localhost:49161/xe control=promotion.ctl skip=0 rows=10000 bindsize=2560000     
+sqlldr system/oracle@localhost:49161/xe control=household_demographics.ctl skip=0 rows=10000 bindsize=256000  
+sqlldr system/oracle@localhost:49161/xe control=catalog_page.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=item.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=time_dim.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=customer_address.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=web_returns.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=date_dim.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=customer.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=catalog_returns.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=store_returns.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=customer_demographics.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=web_sales.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=inventory.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=catalog_sales.ctl skip=0 rows=10000 bindsize=2560000  
+sqlldr system/oracle@localhost:49161/xe control=store_sales.ctl skip=0 rows=10000 bindsize=2560000  
+
+
 
 -- create forein keis
 

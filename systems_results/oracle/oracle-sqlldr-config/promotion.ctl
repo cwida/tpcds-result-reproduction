@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/promotion.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/promotion.dat'
 into table promotion
 fields terminated by "|"
 TRAILING NULLCOLS

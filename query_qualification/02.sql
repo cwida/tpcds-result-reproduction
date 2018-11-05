@@ -63,7 +63,6 @@ FROM
         date_dim
    WHERE date_dim.d_week_seq = wswscs.d_week_seq
      AND d_year = 2001) y,
-
   (SELECT wswscs.d_week_seq d_week_seq2,
           sun_sales sun_sales2,
           mon_sales mon_sales2,
@@ -76,6 +75,5 @@ FROM
         date_dim
    WHERE date_dim.d_week_seq = wswscs.d_week_seq
      AND d_year = 2001+1) z
-WHERE d_week_seq1=d_week_seq2-53
+WHERE d_week_seq1 = d_week_seq2-53
 ORDER BY d_week_seq1;
-

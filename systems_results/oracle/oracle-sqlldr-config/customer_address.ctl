@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/customer_address.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/customer_address.dat'
 into table customer_address
 fields terminated by "|"
 TRAILING NULLCOLS

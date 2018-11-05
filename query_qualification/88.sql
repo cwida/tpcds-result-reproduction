@@ -17,7 +17,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s1,
-
   (SELECT count(*) h9_to_9_30
    FROM store_sales,
         household_demographics,
@@ -35,7 +34,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s2,
-
   (SELECT count(*) h9_30_to_10
    FROM store_sales,
         household_demographics,
@@ -53,7 +51,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s3,
-
   (SELECT count(*) h10_to_10_30
    FROM store_sales,
         household_demographics,
@@ -71,7 +68,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s4,
-
   (SELECT count(*) h10_30_to_11
    FROM store_sales,
         household_demographics,
@@ -89,7 +85,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s5,
-
   (SELECT count(*) h11_to_11_30
    FROM store_sales,
         household_demographics,
@@ -107,7 +102,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s6,
-
   (SELECT count(*) h11_30_to_12
    FROM store_sales,
         household_demographics,
@@ -125,7 +119,6 @@ FROM
           OR (household_demographics.hd_dep_count = 0
               AND household_demographics.hd_vehicle_count<=0+2))
      AND store.s_store_name = 'ese') s7,
-
   (SELECT count(*) h12_to_12_30
    FROM store_sales,
         household_demographics,

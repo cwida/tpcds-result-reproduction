@@ -6,6 +6,10 @@
 -- replace /Users/hannes/source/tpcds-kit/data_qualification with the full path to the TPC-DS data files (.dat)
 -- afterwards create foreign keys from ./tools/tpcds_ri.sql (should run as-is, except in HyPer)
 
+ \copy dbgen_version from dbgen_version.dat delimiter as '|' csv null as ''
+
+ 
+
 COPY dbgen_version          FROM 'PWD/dbgen_version.dat'          (FORMAT csv, DELIMITER '|', HEADER false, NULL '');
 COPY income_band            FROM 'PWD/income_band.dat'            (FORMAT csv, DELIMITER '|', HEADER false, NULL '');
 COPY warehouse              FROM 'PWD/warehouse.dat'              (FORMAT csv, DELIMITER '|', HEADER false, NULL '');
@@ -86,5 +90,5 @@ ANALYZE catalog_sales          ;
 ANALYZE store_sales            ;
 
 
--- run queries as follows for i in ../../query_qualification/*.sql; do j=`basename $i .sql`; echo $j;  psql -p 7483 -h localhost -w --field-separator '	' -A -t -P null=''  < $i > answer_sets2/$j.ans ;  done
+-- run queries as follows for i in ../../query_qualification/*.sql; do j=`basename $i .sql`; echo $j;  psql -p 7483 -h localhost -w --field-separator '	' -A -t -P null=''  < $i > answer_sets/$j.ans ;  done
 

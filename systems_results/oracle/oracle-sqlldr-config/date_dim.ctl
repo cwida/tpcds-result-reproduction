@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/date_dim.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/date_dim.dat'
 into table date_dim
 fields terminated by "|"
 (d_date_sk                ,

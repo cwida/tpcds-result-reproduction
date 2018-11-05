@@ -1,11 +1,9 @@
-
 SELECT i_brand_id brand_id,
        i_brand brand,
        t_hour,
        t_minute,
        sum(ext_price) ext_price
 FROM item,
-
   (SELECT ws_ext_sales_price AS ext_price,
           ws_sold_date_sk AS sold_date_sk,
           ws_item_sk AS sold_item_sk,

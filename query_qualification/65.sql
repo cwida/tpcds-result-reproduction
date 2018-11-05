@@ -6,7 +6,6 @@ SELECT s_store_name,
        i_brand
 FROM store,
      item,
-
   (SELECT ss_store_sk,
           avg(revenue) AS ave
    FROM
@@ -20,7 +19,6 @@ FROM store,
       GROUP BY ss_store_sk,
                ss_item_sk) sa
    GROUP BY ss_store_sk) sb,
-
   (SELECT ss_store_sk,
           ss_item_sk,
           sum(ss_sales_price) AS revenue

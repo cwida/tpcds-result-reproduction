@@ -20,7 +20,6 @@ FROM
               AND ss_addr_sk IS NULL
             GROUP BY ss_store_sk))V1)V11
    WHERE rnk < 11) asceding,
-
   (SELECT *
    FROM
      (SELECT item_sk,

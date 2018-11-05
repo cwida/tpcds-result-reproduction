@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/warehouse.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/warehouse.dat'
 into table warehouse
 fields terminated by "|"
 TRAILING NULLCOLS

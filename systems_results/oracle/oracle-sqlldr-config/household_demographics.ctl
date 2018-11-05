@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/household_demographics.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/household_demographics.dat'
 into table household_demographics
 fields terminated by "|"
 TRAILING NULLCOLS

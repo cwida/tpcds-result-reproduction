@@ -1,7 +1,7 @@
 docker pull mcr.microsoft.com/mssql/server  
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=GdVf53X5526Q19t' -p 1433:1433  -d mcr.microsoft.com/mssql/server:latest
 
- sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -i tools/tpcds.sql
+sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -i tools/tpcds.sql
 
 run those in the sf1 data folder
 
@@ -31,5 +31,7 @@ bcp inventory              in 'inventory.dat'              -S localhost -U sa -P
 bcp catalog_sales          in 'catalog_sales.dat'          -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
 bcp store_sales            in 'store_sales.dat'            -S localhost -U sa -P GdVf53X5526Q19t  -t "|" -F 1 -c
 
+
+sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -i tools/tpcds_ri.sql
 
 then, run the shell script here to run the queries

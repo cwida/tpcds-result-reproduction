@@ -1,4 +1,3 @@
-
 SELECT cd_gender,
        cd_marital_status,
        cd_education_status,

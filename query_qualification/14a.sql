@@ -1,7 +1,6 @@
 WITH cross_items AS
   (SELECT i_item_sk ss_item_sk
    FROM item,
-
      (SELECT iss.i_brand_id brand_id ,
              iss.i_class_id class_id ,
              iss.i_category_id category_id

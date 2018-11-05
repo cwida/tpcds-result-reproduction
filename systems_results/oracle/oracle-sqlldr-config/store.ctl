@@ -1,5 +1,5 @@
 load data
-infile '/Users/hannes/source/tpcds-kit/sf1/store.dat'
+infile '/Users/hannes/source/tpcds-result-reproduction/sf1/store.dat'
 into table store
 fields terminated by "|"
 TRAILING NULLCOLS

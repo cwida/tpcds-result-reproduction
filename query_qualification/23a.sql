@@ -63,4 +63,3 @@ FROM
      AND ws_item_sk = item_sk
      AND ws_bill_customer_sk = c_customer_sk) sq3
 LIMIT 100;
-

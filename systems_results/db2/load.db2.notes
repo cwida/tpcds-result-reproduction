@@ -4,7 +4,6 @@ docker run -d -p 50001:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept
 	
 https://www-01.ibm.com/support/docview.wss?uid=ibm10720011
 
-
 . /Applications/dsdriver/db2profile 
 
 
@@ -55,6 +54,65 @@ msqldump -t  --inserts | grep "^INSERT" | sed -e 's/"sys".//g' -e 's/"//g' > sf1
 
 
 
-db2cli execsql -connstring "DATABASE=tpcds;HOSTNAME=localhost;PORT=50001;UID=db2inst1;PWD=db2inst1-pwd" -statementdelimiter ';' < sf1.sql > /dev/null
+db2cli execsql -connstring "DATABASE=tpcds;HOSTNAME=localhost;PORT=50001;UID=db2inst1;PWD=db2inst1-pwd" -statementdelimiter ';' < store_sales.sql > /dev/null 
+etc.
+
+
+
+-- second attempt
+
+sudo /usr/bin/docker-current run -d -p 50001:50000 -e DB2INST1_PASSWORD=db2inst1-pwd -e LICENSE=accept -v /export/scratch2/home/hannes/tpcds/data_qualification:/tpcds-data --name db2  ibmcom/db2express-c:latest db2start
+
+
+sudo /usr/bin/docker-current exec -i -t db2 /bin/bash
+su - db2inst1
+db2 create db tpcds
+
+
+db2cli execsql -connstring "DATABASE=tpcds;HOSTNAME=localhost;PORT=50001;UID=db2inst1;PWD=db2inst1-pwd" -statementdelimiter ';' < ../tools/tpcds.sql  
+
+
+db2
+connect to tpcds
+load client from /tpcds-data/dbgen_version.dat of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into dbgen_version
+
+
+
+load client from /tpcds-data/dbgen_version.dat          of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into dbgen_version         
+load client from /tpcds-data/income_band.dat            of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into income_band           
+load client from /tpcds-data/warehouse.dat              of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into warehouse             
+load client from /tpcds-data/ship_mode.dat              of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into ship_mode             
+load client from /tpcds-data/reason.dat                 of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into reason                
+load client from /tpcds-data/call_center.dat            of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into call_center           
+load client from /tpcds-data/store.dat                  of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into store                 
+load client from /tpcds-data/web_page.dat               of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into web_page              
+load client from /tpcds-data/web_site.dat               of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into web_site              
+load client from /tpcds-data/promotion.dat              of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into promotion             
+load client from /tpcds-data/household_demographics.dat of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into household_demographics
+load client from /tpcds-data/catalog_page.dat           of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into catalog_page          
+load client from /tpcds-data/item.dat                   of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into item                  
+load client from /tpcds-data/time_dim.dat               of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into time_dim              
+load client from /tpcds-data/customer_address.dat       of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into customer_address      
+load client from /tpcds-data/web_returns.dat            of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into web_returns           
+load client from /tpcds-data/date_dim.dat               of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into date_dim              
+load client from /tpcds-data/customer.dat               of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into customer              
+load client from /tpcds-data/catalog_returns.dat        of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into catalog_returns       
+load client from /tpcds-data/store_returns.dat          of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into store_returns         
+load client from /tpcds-data/customer_demographics.dat  of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into customer_demographics 
+load client from /tpcds-data/web_sales.dat              of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into web_sales             
+load client from /tpcds-data/inventory.dat              of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into inventory             
+load client from /tpcds-data/catalog_sales.dat          of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into catalog_sales         
+load client from /tpcds-data/store_sales.dat            of del modified by coldel| dateformat="YYYY-MM-DD" REPLACE into store_sales           
+
+
+
+
+
+for i in ../../query_qualification/*.sql; do j=`basename $i .sql`; echo $j;  python3 query_db2.py $i > answer_sets/$j.ans ;  done
+
+
+
+
+
 
 

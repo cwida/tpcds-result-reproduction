@@ -1,4 +1,3 @@
--- rewritten to not use subqueries in HAVING
 WITH frequent_ss_items AS
   (SELECT itemdesc,
           i_item_sk item_sk,
@@ -83,4 +82,3 @@ ORDER BY c_last_name,
          c_first_name,
          sales
 LIMIT 100;
-

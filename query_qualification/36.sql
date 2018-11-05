@@ -18,9 +18,9 @@ WHERE d1.d_year = 2001
   AND s_state = 'TN'
 GROUP BY rollup(i_category,i_class)
 ORDER BY lochierarchy DESC ,
+         rank_within_parent
+LIMIT 100;
          -- CASE
          --     WHEN lochierarchy = 0 THEN i_category
          -- END ,
-         rank_within_parent
-LIMIT 100;
 

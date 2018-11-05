@@ -12,7 +12,7 @@ read <- function(name) {
 	df
 }
 
-all <- dplyr::bind_rows(list(read("monetdb"), read("postgres"), read("hyper"), read("sqlserver"), read("oracle")))
+all <- dplyr::bind_rows(list(read("monetdb"), read("postgres"), read("hyper"), read("sqlserver"), read("oracle"), read("db2")))
 
 names(all) <- c("query", "result", "group", "sys")
 

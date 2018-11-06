@@ -1,6 +1,6 @@
 queries=$(wildcard query_qualification/*.sql)
 
-all: matrix.pdf
+all: matrix.png
 
 
 systems_results/hyper/answer_sets/%.ans: query_qualification/%.sql
@@ -51,3 +51,5 @@ oracle.tsv : roundingdiff.py answer_sets_nulls_first/*.ans $(patsubst query_qual
 matrix.pdf : plot-matrix.R hyper.tsv monetdb.tsv oracle.tsv postgres.tsv sqlite.tsv sqlserver.tsv db2.tsv
 	R --quiet -f plot-matrix.R 
 
+matrix.png : matrix.pdf
+	convert -density 300 matrix.pdf matrix.png

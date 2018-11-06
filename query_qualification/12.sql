@@ -4,7 +4,7 @@ SELECT i_item_id,
        i_class,
        i_current_price,
        sum(ws_ext_sales_price) AS itemrevenue,
-       sum(ws_ext_sales_price)*100/sum(sum(ws_ext_sales_price)) OVER (PARTITION BY i_class) AS revenueratio
+       sum(ws_ext_sales_price)*100.0000/sum(sum(ws_ext_sales_price)) OVER (PARTITION BY i_class) AS revenueratio
 FROM web_sales,
      item,
      date_dim

@@ -5,7 +5,7 @@ SELECT i_item_id ,
        i_class,
        i_current_price ,
        sum(cs_ext_sales_price) AS itemrevenue,
-       sum(cs_ext_sales_price)*100/sum(sum(cs_ext_sales_price)) OVER (PARTITION BY i_class) AS revenueratio
+       sum(cs_ext_sales_price)*100.0000/sum(sum(cs_ext_sales_price)) OVER (PARTITION BY i_class) AS revenueratio
 FROM catalog_sales ,
      item,
      date_dim

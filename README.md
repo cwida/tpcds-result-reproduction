@@ -6,15 +6,15 @@ However, as so often, reality is not so easy. The reference answers that ship wi
 
 Since there were serious issues with several reference results, we have fixed them by consensus (two ore more actual systems agreeing) where neccessary. 
 
-In addition, we have included results froms several popular data management systems for further reference, Oracle, SQL Server, PostgreSQL, HyPer, MonetDB and SQLite. The plot below shows how these systems agree with the reference results in this repo. SQL Server and Oracle achieved a perfect score. [Some slides](https://homepages.cwi.nl/~hannes/tpcds-slides.pdf) about the effort are available as well.
+In addition, we have included results froms several popular data management systems for further reference, Oracle, SQL Server, DB2, PostgreSQL, HyPer and MonetDB. The plot below shows how these systems agree with the reference results in this repo. [Some slides](https://homepages.cwi.nl/~hannes/tpcds-slides.pdf) about the effort are available as well.
 
-The qualification queries were created by replacing the qualification values from the TPC-DS spec in the query templates. In addition, we have reformulated the queries to be more compatible with a broad range of systems. Queries range from 1 to 99. The original query templates 14, 23, 24 and 39 contained two queries, they were split up in query 14a and 14b, etc.
+The qualification queries were created by replacing the qualification values from the TPC-DS spec in the query templates. In addition, we have reformulated the queries to be more compatible with a broad range of systems. Queries range from 1 to 99. The original query templates 14, 23, 24 and 39 contained two queries, they were split up in query 14a and 14b, etc. Where applicable, we use the "alternative" templates without the `ROLLUP` keyword. In addition, we have modified the queries in some places slightly to improve compatibility (e.g. rounding, `||` operator etc.).
 
-Because databases cannot agree whether NULL values should be first or last in sorting order, there are two sets of reference results, `answer_sets_nulls_first` (Oracle, SQL Server, MonetDB, SQLite) and `answer_sets_nulls_last` (PostgreSQL and HyPer).
+Because databases cannot agree whether NULL values should be first or last in sorting order, there are two sets of reference results, `answer_sets_nulls_first` (Oracle, SQL Server and MonetDB) and `answer_sets_nulls_last` (DB2, PostgreSQL and HyPer).
 
 Here is a plot of the results. Green means results match the (fixed) references, yellow means some differences remain and red means the system failed to create a result for the query.
 
-![TPC-DS Results Matrix](https://homepages.cwi.nl/~hannes/tpcds-matrix.png)
+![TPC-DS Results Matrix](matrix.png)
 
 
 All reference results are given as tab-separated files, without any quotes, headers or other fluff. Reference results are named `XYZ.ans`, where `XYZ.sql` is the name of the query that produced them in the `query_qualification` folder. The whole set of reference results can be compared with experiment results using the `roundingdiff.py` script, for example

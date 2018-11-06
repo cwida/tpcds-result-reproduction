@@ -35,7 +35,7 @@ systems_results/monetdb/answer_sets/%.ans: query_qualification/%.sql
 	mclient -ftab < $< > $@
 
 monetdb.tsv : roundingdiff.py answer_sets_nulls_first/*.ans $(patsubst query_qualification/%.sql, systems_results/monetdb/answer_sets/%.ans, $(queries))
-	./roundingdiff.py answer_sets_nulls_last systems_results/monetdb/answer_sets > $@
+	./roundingdiff.py answer_sets_nulls_first systems_results/monetdb/answer_sets > $@
 
 
 systems_results/oracle/answer_sets/%.ans: query_qualification/%.sql

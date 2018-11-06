@@ -14,7 +14,7 @@ Because databases cannot agree whether NULL values should be first or last in so
 
 Here is a plot of the results. Green means results match the (fixed) references, yellow means some differences remain and red means the system failed to create a result for the query.
 
-![TPC-DS Results Matrix](https://homepages.cwi.nl/~hannes/tpcds-matrix.png)
+![TPC-DS Results Matrix](matrix.png)
 
 
 All reference results are given as tab-separated files, without any quotes, headers or other fluff. Reference results are named `XYZ.ans`, where `XYZ.sql` is the name of the query that produced them in the `query_qualification` folder. The whole set of reference results can be compared with experiment results using the `roundingdiff.py` script, for example

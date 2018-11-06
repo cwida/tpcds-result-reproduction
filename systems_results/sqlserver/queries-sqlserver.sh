@@ -1,8 +1,6 @@
 #!/bin/bash
 # this is an ugly hack that makes the TPC-DS queries work with SQL server and produces results compatible with the rest here
-
-for i in ../../query_qualification/*.sql
-do 
+i=$1
 j=`basename $i .sql`; 
 echo $j
 sed -e 's/LIMIT/--LIMIT/' -e 's/stddev_samp/stdev/g' < $i > q.sql
@@ -15,8 +13,3 @@ sqlcmd -S localhost -U sa -P GdVf53X5526Q19t -W -h-1 -s"	" -i nocount.sql -i q.s
 		mv answer_sets/$j.ans.fix answer_sets/$j.ans
 	fi
 rm q.sql
-done
-
-
-# FIXME: actually check whether LIMIT is in query
-# FIXME: replace more than two whitespaces with nothing in results

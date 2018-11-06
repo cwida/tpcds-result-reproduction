@@ -98,3 +98,9 @@ EXEC DBMS_STATS.GATHER_TABLE_STATS ('system', 'store_sales');
 
 
 -- use shell script queries-oracle.sh to run queries
+
+
+-- second attempt at queries
+
+python3 -m pip install cx_Oracle --upgrade --user
+

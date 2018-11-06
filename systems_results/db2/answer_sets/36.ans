@@ -1,100 +1,100 @@
-0			2	1
-0	Books		1	1
-0	Children		1	1
-0	Electronics		1	1
-0	Home		1	1
-0	Jewelry		1	1
-0	Men		1	1
-0	Music		1	1
-0	Shoes		1	1
-0	Sports		1	1
-0	Women		1	1
-0			1	1
-0	Books	arts	0	1
-0	Sports	archery	0	1
-0	Shoes		0	1
-0	Shoes	womens	0	1
-0	Shoes	mens	0	1
-0	Shoes	kids	0	1
-0	Shoes	athletic	0	1
-0	Music		0	1
-0	Music	rock	0	1
-0	Music	pop	0	1
-0	Music	country	0	1
-0	Music	classical	0	1
-0	Men		0	1
-0	Men	sports-apparel	0	1
-0	Men	shirts	0	1
-0	Men	pants	0	1
-0	Men	accessories	0	1
-0	Jewelry		0	1
-0	Jewelry	womens watch	0	1
-0	Jewelry	semi-precious	0	1
-0	Jewelry	rings	0	1
-0	Jewelry	pendants	0	1
-0	Jewelry	mens watch	0	1
-0	Jewelry	loose stones	0	1
-0	Jewelry	jewelry boxes	0	1
-0	Jewelry	gold	0	1
-0	Jewelry	estate	0	1
-0	Jewelry	earings	0	1
-0	Jewelry	diamonds	0	1
-0	Jewelry	custom	0	1
-0	Jewelry	costume	0	1
-0	Jewelry	consignment	0	1
-0	Jewelry	bracelets	0	1
-0	Jewelry	birdal	0	1
-0	Home		0	1
-0	Home	wallpaper	0	1
-0	Home	tables	0	1
-0	Home	rugs	0	1
-0	Home	paint	0	1
-0	Home	mattresses	0	1
-0	Home	lighting	0	1
-0	Home	kids	0	1
-0	Home	glassware	0	1
-0	Home	furniture	0	1
-0	Home	flatware	0	1
-0	Home	decor	0	1
-0	Home	curtains/drapes	0	1
-0	Home	blinds/shades	0	1
-0	Home	bedding	0	1
-0	Home	bathroom	0	1
-0	Home	accent	0	1
-0	Electronics	wireless	0	1
-0	Electronics	televisions	0	1
-0	Electronics	stereo	0	1
-0	Electronics	scanners	0	1
-0	Electronics	portable	0	1
-0	Electronics	personal	0	1
-0	Electronics	musical	0	1
-0	Electronics	monitors	0	1
-0	Electronics	memory	0	1
-0	Electronics	karoke	0	1
-0	Electronics	dvd/vcr players	0	1
-0	Electronics	disk drives	0	1
-0	Electronics	cameras	0	1
-0	Electronics	camcorders	0	1
-0	Electronics	automotive	0	1
-0	Electronics	audio	0	1
-0	Children		0	1
-0	Children	toddlers	0	1
-0	Children	school-uniforms	0	1
-0	Children	newborn	0	1
-0	Children	infants	0	1
-0	Books		0	1
-0	Books	travel	0	1
-0	Books	sports	0	1
-0	Books	self-help	0	1
-0	Books	science	0	1
-0	Books	romance	0	1
-0	Books	reference	0	1
-0	Books	parenting	0	1
-0	Books	mystery	0	1
-0	Books	home repair	0	1
-0	Books	history	0	1
-0	Books	fiction	0	1
-0	Books	entertainments	0	1
-0	Books	cooking	0	1
-0	Books	computers	0	1
-0	Books	business	0	1
+-0.4346			2	1
+-0.4457	Electronics		1	1
+-0.4390	Children		1	2
+-0.4353	Home		1	3
+-0.4351	Sports		1	4
+-0.4347	Shoes		1	5
+-0.4339	Men		1	6
+-0.4328	Books		1	7
+-0.4327	Women		1	8
+-0.4288	Jewelry		1	9
+-0.4283	Music		1	10
+-0.4083			1	11
+-0.4931	Books		0	1
+-0.4590	Books	self-help	0	2
+-0.4536	Books	romance	0	3
+-0.4530	Books	parenting	0	4
+-0.4524	Books	home repair	0	5
+-0.4398	Books	arts	0	6
+-0.4377	Books	computers	0	7
+-0.4361	Books	entertainments	0	8
+-0.4335	Books	business	0	9
+-0.4293	Books	cooking	0	10
+-0.4277	Books	history	0	11
+-0.4269	Books	sports	0	12
+-0.4252	Books	fiction	0	13
+-0.4213	Books	travel	0	14
+-0.4131	Books	reference	0	15
+-0.4079	Books	science	0	16
+-0.4024	Books	mystery	0	17
+-0.5197	Children		0	1
+-0.4439	Children	infants	0	2
+-0.4411	Children	toddlers	0	3
+-0.4393	Children	newborn	0	4
+-0.4315	Children	school-uniforms	0	5
+-0.4811	Electronics	scanners	0	1
+-0.4747	Electronics	wireless	0	2
+-0.4688	Electronics	musical	0	3
+-0.4596	Electronics	audio	0	4
+-0.4592	Electronics	portable	0	5
+-0.4576	Electronics	automotive	0	6
+-0.4505	Electronics	personal	0	7
+-0.4465	Electronics	karoke	0	8
+-0.4447	Electronics	camcorders	0	9
+-0.4424	Electronics	stereo	0	10
+-0.4356	Electronics	monitors	0	11
+-0.4300	Electronics	disk drives	0	12
+-0.4295	Electronics	dvd/vcr players	0	13
+-0.4277	Electronics	televisions	0	14
+-0.4274	Electronics	cameras	0	15
+-0.4178	Electronics	memory	0	16
+-0.4582	Home	wallpaper	0	1
+-0.4581	Home	rugs	0	2
+-0.4539	Home	blinds/shades	0	3
+-0.4508	Home	tables	0	4
+-0.4500	Home	bedding	0	5
+-0.4444	Home	paint	0	6
+-0.4429	Home	kids	0	7
+-0.4419	Home	decor	0	8
+-0.4402	Home	curtains/drapes	0	9
+-0.4367	Home	accent	0	10
+-0.4296	Home	glassware	0	11
+-0.4212	Home	flatware	0	12
+-0.4196	Home	mattresses	0	13
+-0.4167	Home	furniture	0	14
+-0.4161	Home	bathroom	0	15
+-0.3974	Home	lighting	0	16
+-0.2750	Home		0	17
+-0.4820	Jewelry	consignment	0	1
+-0.4529	Jewelry	gold	0	2
+-0.4422	Jewelry	womens watch	0	3
+-0.4389	Jewelry	semi-precious	0	4
+-0.4375	Jewelry		0	5
+-0.4356	Jewelry	bracelets	0	6
+-0.4346	Jewelry	birdal	0	7
+-0.4345	Jewelry	loose stones	0	8
+-0.4334	Jewelry	rings	0	9
+-0.4307	Jewelry	estate	0	10
+-0.4297	Jewelry	pendants	0	11
+-0.4220	Jewelry	earings	0	12
+-0.4175	Jewelry	costume	0	13
+-0.4126	Jewelry	jewelry boxes	0	14
+-0.4125	Jewelry	mens watch	0	15
+-0.4054	Jewelry	custom	0	16
+-0.4036	Jewelry	diamonds	0	17
+-0.4407	Men	sports-apparel	0	1
+-0.4379	Men	accessories	0	2
+-0.4359	Men	pants	0	3
+-0.4236	Men	shirts	0	4
+-0.3762	Men		0	5
+-0.4743	Music		0	1
+-0.4332	Music	pop	0	2
+-0.4302	Music	country	0	3
+-0.4271	Music	classical	0	4
+-0.4213	Music	rock	0	5
+-0.6440	Shoes		0	1
+-0.4435	Shoes	mens	0	2
+-0.4429	Shoes	womens	0	3
+-0.4308	Shoes	kids	0	4
+-0.4200	Shoes	athletic	0	5
+-0.4674	Sports	basketball	0	1

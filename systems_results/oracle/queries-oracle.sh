@@ -3,7 +3,7 @@
 
 export PATH=$PATH:/Users/hannes/Downloads/instantclient_12_2/
 
-for i in ../../query_qualification/35.sql
+for i in ../../query_qualification/27.sql
 do 
 j=`basename $i .sql`; 
 echo $j

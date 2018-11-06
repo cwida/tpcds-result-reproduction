@@ -22,8 +22,6 @@ def load(fname):
 			df[c] = df[c].astype(float)
 		if (str(df.dtypes[c]) == 'object'):
 			df[c] = df[c].str.strip()
-	# value-sort
-	#return df.sort_values(list(df)).reset_index(drop=True)
 	return df
 
 def diff(f1, f2):

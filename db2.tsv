@@ -78,7 +78,7 @@
 74	diff	diff_row_count
 75	match	
 76	match	
-77	diff	diff_data
+77	match	
 78	match	
 79	match	
 80	match	
@@ -87,7 +87,7 @@
 83	match	
 84	diff	diff_data
 85	match	
-86	diff	diff_data
+86	match	
 87	match	
 88	match	
 89	diff	diff_data

@@ -52,10 +52,18 @@ snowflake.tsv : roundingdiff.py answer_sets_nulls_last/*.ans $(patsubst query_qu
 	./roundingdiff.py answer_sets_nulls_last systems_results/snowflake/answer_sets > $@
 
 
+# systems_results/sqlite/answer_sets/%.ans: query_qualification/%.sql
+# 	./systems_results/sqlite/sqlite3 -cmd '.sep "\t"' -cmd ".headers OFF" -cmd ".nullvalue ''" -cmd ".timer OFF" systems_results/sqlite/ds.db < $< > $@
+
+
+# sqlite.tsv : roundingdiff.py answer_sets_nulls_last/*.ans $(patsubst query_qualification/%.sql, systems_results/sqlite/answer_sets/%.ans, $(queries))
+# 	./roundingdiff.py answer_sets_nulls_last systems_results/sqlite/answer_sets > $@
+
+
 # # sqlite.tsv : roundingdiff.py answer_sets_nulls_first/*.ans systems_results/sqlite/answer_sets/*.ans
 # # 	./roundingdiff.py answer_sets_nulls_first systems_results/sqlite/answer_sets > $@
 
-matrix.pdf : plot-matrix.R hyper.tsv monetdb.tsv oracle.tsv postgres.tsv sqlite.tsv sqlserver.tsv db2.tsv snowflake.tsv
+matrix.pdf : plot-matrix.R hyper.tsv monetdb.tsv oracle.tsv postgres.tsv sqlserver.tsv db2.tsv snowflake.tsv
 	R --quiet -f plot-matrix.R 
 
 matrix.png : matrix.pdf

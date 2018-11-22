@@ -39,7 +39,7 @@
 36	diff	diff_data
 37	match	
 38	match	
-39a	match	
+39a	diff	diff_row_count
 39b	match	
 40	match	
 41	match	

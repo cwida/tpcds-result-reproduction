@@ -36,7 +36,7 @@
 33	match	
 34	match	
 35	match	
-36	diff	diff_data
+36	match	
 37	match	
 38	match	
 39a	diff	diff_row_count
@@ -87,7 +87,7 @@
 83	match	
 84	match	
 85	match	
-86	diff	diff_data
+86	match	
 87	match	
 88	match	
 89	match	
@@ -99,5 +99,5 @@
 95	match	
 96	match	
 97	match	
-98	diff	diff_row_count
+98	match	
 99	match	

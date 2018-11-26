@@ -21,7 +21,7 @@ FROM
           OR household_demographics.hd_buy_potential = '>10000')
      AND household_demographics.hd_vehicle_count > 0
      AND CASE
-             WHEN household_demographics.hd_vehicle_count > 0 THEN household_demographics.hd_dep_count/ household_demographics.hd_vehicle_count
+             WHEN household_demographics.hd_vehicle_count > 0 THEN (household_demographics.hd_dep_count*1.000)/ household_demographics.hd_vehicle_count
              ELSE NULL
          END > 1
      AND date_dim.d_year IN (1999,

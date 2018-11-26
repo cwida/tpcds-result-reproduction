@@ -22,9 +22,9 @@ FROM
    GROUP BY w_warehouse_name,
             i_item_id) x
 WHERE (CASE
-           WHEN inv_before > 0 THEN inv_after / inv_before
+           WHEN inv_before > 0 THEN (inv_after*1.000) / inv_before
            ELSE NULL
-       END) BETWEEN 2.0/3.0 AND 3.0/2.0
+       END) BETWEEN 2.000/3.000 AND 3.000/2.000
 ORDER BY w_warehouse_name,
          i_item_id
 LIMIT 100;

@@ -1,0 +1,103 @@
+01	diff	diff_data
+02	match	
+03	match	
+04	match	
+05	fail	
+06	diff	diff_data
+07	diff	diff_data
+08	match	
+09	match	
+10	fail	
+11	diff	diff_row_count
+12	fail	
+13	match	
+14a	fail	
+14b	diff	diff_data
+15	diff	diff_data
+16	fail	
+17	fail	
+18	fail	
+19	diff	diff_data
+20	fail	
+21	fail	
+22	fail	
+23a	fail	
+23b	fail	
+24a	match	
+24b	match	
+25	match	
+26	match	
+27	fail	
+28	match	
+29	match	
+30	diff	diff_data
+31	diff	diff_row_count
+32	fail	
+33	match	
+34	diff	diff_data
+35	fail	
+36	fail	
+37	fail	
+38	match	
+39a	fail	
+39b	fail	
+40	fail	
+41	match	
+42	match	
+43	match	
+44	fail	
+45	match	
+46	diff	diff_types
+47	fail	
+48	match	
+49	fail	
+50	match	
+51	fail	
+52	match	
+53	fail	
+54	match	
+55	match	
+56	diff	diff_data
+57	fail	
+58	fail	
+59	match	
+60	match	
+61	match	
+62	fail	
+63	fail	
+64	match	
+65	diff	diff_data
+66	diff	diff_data
+67	fail	
+68	diff	diff_data
+69	fail	
+70	fail	
+71	diff	diff_data
+72	fail	
+73	match	
+74	match	
+75	diff	diff_data
+76	fail	
+77	fail	
+78	diff	diff_data
+79	diff	diff_types
+80	fail	
+81	diff	diff_data
+82	fail	
+83	match	
+84	match	
+85	match	
+86	fail	
+87	fail	
+88	match	
+89	fail	
+90	diff	diff_data
+91	match	
+92	fail	
+93	diff	diff_data
+94	fail	
+95	diff	diff_data
+96	match	
+97	fail	
+98	fail	
+99	fail	

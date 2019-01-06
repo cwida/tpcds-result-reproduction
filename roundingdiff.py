@@ -28,9 +28,12 @@ def diff(f1, f2):
 	if not os.path.exists(f1) or not os.path.exists(f2) or os.path.getsize(f1) == 0 or os.path.getsize(f2) == 0:
 		return {'class': 'fail', 'group': '', 'message': "No result %s <> %s" % (f1, f2)}
 
+	try:
+		p1 = load(f1)
+		p2 = load(f2)
+	except:
+		return {'class': 'fail', 'group': 'loader_exception', 'message': "failed to load file"}
 
-	p1 = load(f1)
-	p2 = load(f2)
 
 	if len(p1.dtypes) != len(p2.dtypes):
 		return {'class': 'diff', 'group': 'diff_column_count', 'message': "Different number of columns: %s:%d, %s:%d" % (f1, len(p1.dtypes), f2, len(p2.dtypes))}

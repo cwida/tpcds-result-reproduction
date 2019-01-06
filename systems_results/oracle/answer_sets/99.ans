@@ -1,6 +1,6 @@
+(SELECT SUBSTR(w_warehouse_name,1,20) w_substr, *
 *
-*
-ERROR at line 29:
+ERROR at line 28:
 ORA-00936: missing expression 
 
 

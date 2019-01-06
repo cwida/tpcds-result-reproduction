@@ -19,7 +19,7 @@
 18	match	
 19	match	
 20	match	
-21	diff	diff_data
+21	match	
 22	match	
 23a	match	
 23b	match	
@@ -34,7 +34,7 @@
 31	match	
 32	match	
 33	match	
-34	diff	diff_row_count
+34	match	
 35	match	
 36	match	
 37	match	
@@ -74,7 +74,7 @@
 70	match	
 71	match	
 72	match	
-73	diff	diff_row_count
+73	match	
 74	match	
 75	match	
 76	match	

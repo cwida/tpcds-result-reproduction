@@ -6,7 +6,7 @@ However, as so often, reality is not so easy. The reference answers that ship wi
 
 Since there were serious issues with several reference results, we have fixed them by consensus (two ore more actual systems agreeing) where neccessary. 
 
-In addition, we have included results froms several popular data management systems for further reference, Oracle, SQL Server, DB2, PostgreSQL, HyPer and MonetDB. The plot below shows how these systems agree with the reference results in this repo. [Some slides](https://homepages.cwi.nl/~hannes/tpcds-slides.pdf) about the effort are available as well.
+In addition, we have included results froms several popular data management systems for further reference, Oracle, SQL Server, DB2, PostgreSQL, HyPer, MonetDB and DuckDB. The plot below shows how these systems agree with the reference results in this repo. [Some slides](https://homepages.cwi.nl/~hannes/tpcds-slides.pdf) about the effort are available as well.
 
 The qualification queries were created by replacing the qualification values from the TPC-DS spec in the query templates. In addition, we have reformulated the queries to be more compatible with a broad range of systems. Queries range from 1 to 99. The original query templates 14, 23, 24 and 39 contained two queries, they were split up in query 14a and 14b, etc. Where applicable, we use the "alternative" templates without the `ROLLUP` keyword. In addition, we have modified the queries in some places slightly to improve compatibility (e.g. rounding, `||` operator etc.).
 

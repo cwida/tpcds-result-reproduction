@@ -1,2 +1,3 @@
 **/.DS_Store
 *.log
+systems_results/duckdb/ds.duckdb

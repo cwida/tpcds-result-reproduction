@@ -34,6 +34,13 @@ db2.tsv : roundingdiff.py answer_sets_nulls_last/*.ans $(patsubst query_qualific
 systems_results/monetdb/answer_sets/%.ans: query_qualification/%.sql
 	mclient -ftab < $< > $@
 
+systems_results/duckdb/answer_sets/%.ans: query_qualification/%.sql
+	duckdb -cmd "SET NULL_ORDER='postgres';" -cmd ".mode tabs" -cmd ".headers off" systems_results/duckdb/ds.duckdb < $< > $@
+
+duckdb.tsv : roundingdiff.py answer_sets_nulls_last/*.ans $(patsubst query_qualification/%.sql, systems_results/duckdb/answer_sets/%.ans, $(queries))
+	./roundingdiff.py answer_sets_nulls_last systems_results/duckdb/answer_sets > $@
+
+
 monetdb.tsv : roundingdiff.py answer_sets_nulls_first/*.ans $(patsubst query_qualification/%.sql, systems_results/monetdb/answer_sets/%.ans, $(queries))
 	./roundingdiff.py answer_sets_nulls_first systems_results/monetdb/answer_sets > $@
 
@@ -63,7 +70,7 @@ snowflake.tsv : roundingdiff.py answer_sets_nulls_last/*.ans $(patsubst query_qu
 # # sqlite.tsv : roundingdiff.py answer_sets_nulls_first/*.ans systems_results/sqlite/answer_sets/*.ans
 # # 	./roundingdiff.py answer_sets_nulls_first systems_results/sqlite/answer_sets > $@
 
-matrix.pdf : plot-matrix.R hyper.tsv monetdb.tsv oracle.tsv postgres.tsv sqlserver.tsv db2.tsv snowflake.tsv
+matrix.pdf : plot-matrix.R duckdb.tsv hyper.tsv monetdb.tsv oracle.tsv postgres.tsv sqlserver.tsv db2.tsv snowflake.tsv
 	R --quiet -f plot-matrix.R 
 
 matrix.png : matrix.pdf
